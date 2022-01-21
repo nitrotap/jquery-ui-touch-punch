@@ -3,8 +3,6 @@
 
 > **jQuery UI Touch Punch is a small hack that enables the use of touch events on sites using the jQuery UI user interface library.**
 
-_[Visit the official Touch Punch website](http://touchpunch.furf.com)._
-
 Currently, [jQuery UI](http://jqueryui.com/) user interface library does not support the use of touch events in their widgets and interactions. This means that the slick UI you designed and tested in your desktop browser will fail on most, if not all, touch-enabled mobile devices, because jQuery UI listens to mouse events—mouseover, mousemove and mouseout—not touch events—touchstart, touchmove and touchend.
 
 That's where jQuery UI Touch Punch comes in. Touch Punch works by using [simulated events](https://developer.mozilla.org/en/DOM/document.createEvent) to map [touch events](http://www.html5rocks.com/en/mobile/touch/) to their mouse event analogs. Simply include the script on your page and your touch events will be turned into their corresponding mouse events to which jQuery UI will respond as expected.
@@ -14,11 +12,13 @@ As I said, Touch Punch is a hack. It [duck punches](http://en.wikipedia.org/wiki
 This code is dual licensed under the MIT or GPL Version 2 licenses and is therefore free to use, modify and/or distribute, but if you include Touch Punch in other software packages or plugins, please include an attribution to the original software and a link to [this Touch Punch website](http://touchpunch.furf.com/).
 
 RWAP Version (2019)
-The above was last updated in 2014.
 
 I have created a new fork which contains various suggested improvements to the code when it became clear that touch-punch does not work too well on Android devices, and actually stopped the close button on jquery-ui dialogs from working on some devices.
 
 www.rwapsoftware.co.uk
+
+
+
 
 
 ## Using Touch Punch is as easy as 1, 2…
