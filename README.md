@@ -18,7 +18,7 @@ Fork: https://github.com/RWAP/jquery-ui-touch-punch
 www.rwapsoftware.co.uk
 
 
-(1/20/2022) forked by nitrotap from furf's touchpunch v0.2.3 then forked from RWAP's touchpunch v1.0.8
+(1/20/2022) forked by nitrotap from RWAP's touchpunch v1.0.8 which was forked from the OG furf's touchpunch v0.2.3 
 
 
 ## Using Touch Punch is as easy as 1, 2…

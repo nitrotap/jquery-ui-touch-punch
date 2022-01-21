@@ -30,8 +30,8 @@
 }(function ($) {
 
   // Detect touch support - Windows Surface devices and other touch devices
-  $.support.mspointer = window.navigator.msPointerEnabled;		
-  $.support.touch = ( 'ontouchstart' in document
+  $.mspointer = window.navigator.msPointerEnabled;
+  $.touch = ( 'ontouchstart' in document
    	|| 'ontouchstart' in window
    	|| window.TouchEvent
    	|| (window.DocumentTouch && document instanceof DocumentTouch)
@@ -40,7 +40,7 @@
   );
 
   // Ignore browsers without touch or mouse support
-  if ((!$.support.touch && !$.support.mspointer) || !$.ui.mouse) {
+  if ((!$.touch && !$.mspointer) || !$.ui.mouse) {
 	return;
   }
 
@@ -210,7 +210,7 @@
     let self = this;
 
     // Microsoft Surface Support = remove original touch Action
-    if ($.support.mspointer) {
+    if ($.mspointer) {
       self.element[0].style.msTouchAction = 'none';
     }	  
 
