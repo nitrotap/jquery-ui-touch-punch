@@ -1,18 +1,20 @@
 /*!
  * jQuery UI Touch Punch 1.0.8 as modified by RWAP Software
- * based on original touchpunch v0.2.3 which has not been updated since 2014
+ * Based on original touchpunch v0.2.3 which has not been updated since 2014
  *
  * Updates by RWAP Software to take account of various suggested changes on the original code issues
- *
  * Original: https://github.com/furf/jquery-ui-touch-punch
  * Copyright 2011–2014, Dave Furfero
  * Dual licensed under the MIT or GPL Version 2 licenses.
+ * Fork: https://github.com/RWAP/jquery-ui-touch-punch
  *
+ * (2021) forked by nitrotap from furf's touchpunch v0.2.3 then forked from RWAP's touchpunch v1.0.8
  * Fork: https://github.com/RWAP/jquery-ui-touch-punch
  *
  * Depends:
  * jquery.ui.widget.js
  * jquery.ui.mouse.js
+ *
  */
 
 (function( factory ) {
@@ -42,12 +44,12 @@
 	return;
   }
 
-  var mouseProto = $.ui.mouse.prototype,
+  let mouseProto = $.ui.mouse.prototype,
       _mouseInit = mouseProto._mouseInit,
       _mouseDestroy = mouseProto._mouseDestroy,
       touchHandled;
 
-    /**
+  /**
     * Get the x,y position of a touch event
     * @param {Object} event A touch event
     */
@@ -75,7 +77,7 @@
       event.preventDefault();
     }
 
-    var touch = event.originalEvent.changedTouches[0],
+    let touch = event.originalEvent.changedTouches[0],
         simulatedEvent = document.createEvent('MouseEvents');
 
     // Initialize the simulated mouse event using the touch event's coordinates
@@ -107,7 +109,7 @@
    */
   mouseProto._touchStart = function (event) {
 
-    var self = this;
+    let self = this;
 
     // Interaction time
     this._startedMove = event.timeStamp;
@@ -174,12 +176,12 @@
     // If the touch interaction did not move, it should trigger a click
     // Check for this in two ways - length of time of simulation and distance moved
     // Allow for Apple Stylus to be used also
-    var timeMoving = event.timeStamp - this._startedMove;
+    let timeMoving = event.timeStamp - this._startedMove;
     if (!this._touchMoved || timeMoving < 500) {
         // Simulate the click event
         simulateMouseEvent(event, 'click');
     } else {
-      var endPos = getTouchCoords(event);
+      let endPos = getTouchCoords(event);
       if ((Math.abs(endPos.x - this._startPos.x) < 10) && (Math.abs(endPos.y - this._startPos.y) < 10)) {
 
           // If the touch interaction did not move, it should trigger a click
@@ -205,8 +207,8 @@
    */
   mouseProto._mouseInit = function () {
 
-    var self = this;
-	  
+    let self = this;
+
     // Microsoft Surface Support = remove original touch Action
     if ($.support.mspointer) {
       self.element[0].style.msTouchAction = 'none';
@@ -228,7 +230,7 @@
    */
   mouseProto._mouseDestroy = function () {
 
-    var self = this;
+    let self = this;
 
     // Delegate the touch handlers to the widget's element
     self.element.off({
