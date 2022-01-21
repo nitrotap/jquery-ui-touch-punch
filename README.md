@@ -9,17 +9,17 @@ That's where jQuery UI Touch Punch comes in. Touch Punch works by using [simulat
 
 As I said, Touch Punch is a hack. It [duck punches](http://en.wikipedia.org/wiki/Monkey_patch) some of jQuery UI's core functionality to handle the mapping of touch events. Touch Punch works with all basic implementations of jQuery UI's interactions and widgets. However, you may find more complex cases where Touch Punch fails. If so, scroll down to learn how you can file and/or fix issues.
 
-This code is dual licensed under the MIT or GPL Version 2 licenses and is therefore free to use, modify and/or distribute, but if you include Touch Punch in other software packages or plugins, please include an attribution to the original software and a link to [this Touch Punch website](http://touchpunch.furf.com/).
+This code is dual licensed under the MIT or GPL Version 2 licenses and is therefore free to use, modify and/or distribute, but if you include Touch Punch in other software packages or plugins, please include an attribution to the original software and a link to [Link is permanently down](http://touchpunch.furf.com/) (2021) This link is permanently down, so I have removed the link. Please see the [original repo](https://github.com/furf/jquery-ui-touch-punch).
 
 RWAP Version (2019)
 The above was last updated in 2014.
 I have created a new fork which contains various suggested improvements to the code when it became clear that touch-punch does not work too well on Android devices, and actually stopped the close button on jquery-ui dialogs from working on some devices.
+Fork: https://github.com/RWAP/jquery-ui-touch-punch
 www.rwapsoftware.co.uk
 
 
-(2021) forked by nitrotap from furf's touchpunch v0.2.3 then forked from RWAP's touchpunch v1.0.8
+(1/20/2022) forked by nitrotap from furf's touchpunch v0.2.3 then forked from RWAP's touchpunch v1.0.8
 
-Fork: https://github.com/RWAP/jquery-ui-touch-punch
 
 ## Using Touch Punch is as easy as 1, 2…
 
